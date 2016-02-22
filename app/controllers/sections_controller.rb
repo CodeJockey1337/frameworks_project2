@@ -1,6 +1,11 @@
 class SectionsController < ApplicationController
   before_action :set_section, only: [:show, :edit, :update, :destroy]
 
+  attr_accessor :section_id
+  attr_accessor :student_id
+  attr_accessor :professor_id 
+  attr_accessor :course_id
+  
   # GET /sections
   # GET /sections.json
   def index
@@ -69,6 +74,7 @@ class SectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def section_params
+      puts params.inspect
       params.require(:section).permit(:section_id, :student_id, :professor_id, :course_id)
     end
 end
