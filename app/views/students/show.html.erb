@@ -2,7 +2,12 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @student.name %>
+  <%= @student ? @student.name : "NIL STUDENT NAME" %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @student ? @student.last_name : "NIL STUDENT LAST NAME" %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
