@@ -38,5 +38,20 @@ Course.create([
         name: 'Petroleum Engineering',
         department_name: 'CE',
         course_code: '4050'
+    },
+    {
+        name: 'Computer Science 1',
+        department_name: 'CS',
+        course_code: '1010'
+    },
+    {
+        name: 'Computer Science 2',
+        department_name: 'CS',
+        course_code: '2010'
+    },
+    {
+        name: 'Databases',
+        department_name: 'CS',
+        course_code: '3020'
     }
     ])
