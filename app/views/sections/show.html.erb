@@ -1,24 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Course Name:</strong>
+  <%= @section.course ? @section.course.name : "NIL COURSE NAME" %>
+</p>
+
+<p>
+  <strong>Course Code:</strong>
+  <%= @section.course ? @section.course.course_code : "NIL COURSE CODE" %>
+</p>
+
+<p>
   <strong>Section:</strong>
   <%= @section.section_id %>
 </p>
 
 <p>
   <strong>Student:</strong>
-  <%= @section.student ? @section.student.name : "NIL STUDENT NAME" %>
+  <%= @section.student ? @section.student.name + ' ' + @section.student.last_name: "NIL STUDENT NAME" %>
 </p>
 
 <p>
   <strong>Professor:</strong>
-  <%= @section.professor ? @section.professor.name : "NIL STUDENT NAME" %>
+  <%= @section.professor ? @section.professor.name + ' ' + @section.professor.last_name : "NIL STUDENT NAME" %>
 </p>
 
-<p>
-  <strong>Course:</strong>
-  <%= @section.course ? @section.course.name : "NIL COURSE NAME" %>
-</p>
+
 
 <%= link_to 'Edit', edit_section_path(@section) %> |
 <%= link_to 'Return to Sections list', sections_path %>
