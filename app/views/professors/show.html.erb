@@ -2,8 +2,12 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @professor.name %>
+  <%= @professor ? @professor.name : "NIL PROFESSOR FIRST NAME" %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%= @professor ? @professor.last_name : "NIL PROFESSOR LAST NAME" %>
 </p>
 
 <%= link_to 'Edit', edit_professor_path(@professor) %> |
-<%= link_to 'Back', professors_path %>
+<%= link_to 'Return to Professors list', professors_path %>

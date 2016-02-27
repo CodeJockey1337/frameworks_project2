@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :section_id %><br>
+    <%= f.label 'Section #' %><br>
     <%= f.number_field :section_id %>
   </div>
   <div class="field">
-    <%= f.label :course_id %><br>
-    <%= f.select(:course_id, options_from_collection_for_select(Course.all, :id, :name)) %>
+    <%= f.label 'Course Code' %><br>
+    <%= f.select(:course_id, options_from_collection_for_select(Course.all, :id, :course_code)) %>
   </div>
   
   <div class="field">
-    <%= f.label :professor_id %><br>
-    <%= f.select(:professor_id, options_from_collection_for_select(Professor.all, :id, :name)) %>
+    <%= f.label 'Professor Last Name' %><br>
+    <%= f.select(:professor_id, options_from_collection_for_select(Professor.all, :id, :last_name)) %>
   </div>
   
   <div class="field">
-    <%= f.label :student_id %><br>
-    <%= f.select(:student_id, options_from_collection_for_select(Student.all, :id, :name)) %>
+    <%= f.label 'Student Last Name' %><br>
+    <%= f.select(:student_id, options_from_collection_for_select(Student.all, :id, :last_name)) %>
   </div>
   
   <div class="actions">

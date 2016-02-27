@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
+      <th>Course</th>
       <th>Section</th>
       <th>Student</th>
       <th>Professor</th>
-      <th>Course</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @sections.each do |section| %>
       <tr>
-        <td><%= section.section_id %></td>
+        <td><%= section.course ? section.course.name : "NIL COURSE NAME" %></td>
+        <td><%= section ? section.section_id : "NIL SECTION NUMBER" %></td>
         <td><%= section.student ? section.student.name : "NIL STUDENT NAME" %></td>
         <td><%= section.professor ? section.professor.name : "NIL PROFESSOR NAME" %></td>
-        <td><%= section.course ? section.course.name : "NIL COURSE NAME" %></td>
         <td><%= link_to 'Show', section %></td>
         <td><%= link_to 'Edit', edit_section_path(section) %></td>
         <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>

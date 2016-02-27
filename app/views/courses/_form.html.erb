@@ -12,8 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "Course Name" %><br>
     <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label "Course Code" %><br>
+    <%= f.text_field :course_code %>
+  </div>
+  <div class="field">
+    <%= f.label :department_name %><br>
+    <%= f.text_field :department_name %>
   </div>
   <div class="actions">
     <%= f.submit %>
