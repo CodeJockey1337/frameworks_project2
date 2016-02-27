@@ -7,17 +7,17 @@
 
 <p>
   <strong>Student:</strong>
-  <%= @section.student %>
+  <%= @section.student ? @section.student.name : "NIL STUDENT NAME" %>
 </p>
 
 <p>
   <strong>Professor:</strong>
-  <%= @section.professor %>
+  <%= @section.professor ? @section.professor.name : "NIL STUDENT NAME" %>
 </p>
 
 <p>
   <strong>Course:</strong>
-  <%= @section.course %>
+  <%= @section.course ? @section.course.name : "NIL COURSE NAME" %>
 </p>
 
 <%= link_to 'Edit', edit_section_path(@section) %> |

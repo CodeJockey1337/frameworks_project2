@@ -17,9 +17,9 @@
     <% @sections.each do |section| %>
       <tr>
         <td><%= section.section_id %></td>
-        <td><%= section.student ? section.student.name : "NO STUDENT" %></td>
-        <td><%= section.professor ? section.professor.name : "NO PROFESSOR" %></td>
-        <td><%= section.course ? section.course.name : "NO COURSE" %></td>
+        <td><%= section.student ? section.student.name : "NIL STUDENT NAME" %></td>
+        <td><%= section.professor ? section.professor.name : "NIL PROFESSOR NAME" %></td>
+        <td><%= section.course ? section.course.name : "NIL COURSE NAME" %></td>
         <td><%= link_to 'Show', section %></td>
         <td><%= link_to 'Edit', edit_section_path(section) %></td>
         <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,6 +35,6 @@
 
 <p>
     Click here for <%= link_to "Students", students_url %> page <br>
-    Click here for <%= link_to "Sections", sections_url %> page <br>
+    Click here for <%= link_to "Professors", professors_url %> page <br>
     Click here for <%= link_to "Courses", courses_url %> page <br>
 </p>
