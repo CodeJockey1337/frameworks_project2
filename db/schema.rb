@@ -29,12 +29,12 @@ ActiveRecord::Schema.define(version: 20160221190926) do
   end
 
   create_table "sections", force: :cascade do |t|
-    t.integer  "section_id"
+    t.integer  "section_number"
     t.integer  "student_id"
     t.integer  "professor_id"
     t.integer  "course_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   add_index "sections", ["course_id"], name: "index_sections_on_course_id"
