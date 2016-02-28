@@ -8,7 +8,7 @@
       <th>Course Name</th>
       <th>Course Code</th>
       <th>Section #</th>
-      <th>Student</th>
+      <th>Students</th>
       <th>Professor</th>
       <th colspan="3"></th>
     </tr>
@@ -20,7 +20,6 @@
         <td><%= section.course ? section.course.name : "NIL COURSE NAME" %></td>
         <td><%= section.course ? section.course.course_code : "NIL COURSE CODE" %></td>
         <td><%= section ? section.section_id : "NIL SECTION NUMBER" %></td>
-        <td><%= section.student ? section.student.name : "NIL STUDENT NAME" %></td>
         <td><%= section.professor ? (section.professor.name + ' ' + section.professor.last_name) : "NIL PROFESSOR NAME" %></td>
         <td><%= link_to 'Show', section %></td>
         <td><%= link_to 'Edit', edit_section_path(section) %></td>

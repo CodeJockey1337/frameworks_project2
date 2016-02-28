@@ -25,11 +25,6 @@
     <%= f.select(:professor_id, options_from_collection_for_select(Professor.all, :id, :last_name)) %>
   </div>
   
-  <div class="field">
-    <%= f.label 'Student Last Name' %><br>
-    <%= f.select(:student_id, options_from_collection_for_select(Student.all, :id, :last_name)) %>
-  </div>
-  
   <div class="actions">
     <%= f.submit %>
   </div>

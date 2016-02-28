@@ -8,64 +8,64 @@
 
 Student.create([ 
     {
-        name: 'Ross', 
-        last_name: 'Baldwin'
+        student_name: 'Ross Baldwin', 
+        student_number: 900418205
     },
     {
-        name: 'Eddard',
-        last_name: 'Stark'
+        student_name: 'Eddard Stark',
+        student_number: 900756885
     },
     {
-        name: 'Jon',
-        last_name: 'Snow'
+        student_name: 'Jon Snow',
+        student_number: 900756846
     },
     {
-        name: 'Brandon',
-        last_name: 'Stark'
+        student_name: 'Brandon Stark',
+        student_number: 900756806
     },
     {
-        name: 'Theon',
-        last_name: 'Greyjoy'
+        student_name: 'Theon Greyjoy',
+        student_number: 900756811
+    },
+    { 
+        student_name: 'Sandor Clegane',
+        student_number: 900756845
     },
     {
-        name: 'Sandor',
-        last_name: 'Clegane'
+        student_name: 'Jojen Reed',
+        student_number: 900756873
     },
     {
-        name: 'Jojen',
-        last_name: 'Reed'
+        student_name: 'Catelyn Tully',
+        student_number: 900756888
     },
     {
-        name: 'Catelyn',
-        last_name: 'Tully'
+        student_name: 'Petyr Baelish',
+        student_number: 900756894
     },
     {
-        name: 'Petyr',
-        last_name: 'Baelish'
+        student_name: 'Joffery Baratheon',
+        student_number: 900756849
     },
     {
-        name: 'Joffery',
-        last_name: 'Baratheon'
+        student_name: 'Tyrion Lannister',
+        student_number: 900756833
     },
     {
-        name: 'Tyrion',
-        last_name: 'Lannister'
+        student_name: 'Brienne Tarth',
+        student_number: 900756854
     },
     {
-        name: 'Brienne',
-        last_name: 'Tarth'
+        student_name: 'Edmure Tully',
+        student_number: 900756871
     },
     {
-        name: 'Edmure',
-        last_name: 'Tully'
+        student_name: 'Tywin Lannister',
+        student_number: 900756872
     },
     {
-        name: 'Tywin',
-        last_name: 'Lannister'
-    },
-    {
-        name: 'Daenerys',
-        last_name: 'Targaryen'
+        student_name: 'Daenerys Targaryen',
+        student_number: 900756812
     }
     ])
     
@@ -100,7 +100,7 @@ Course.create([
     },
     {
         name: 'Software Engineering 1',
-        department_name: 'CE',
+        department_name: 'CS',
         course_code: 'CS4250'
     },
     {

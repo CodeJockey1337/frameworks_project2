@@ -42,10 +42,10 @@ ActiveRecord::Schema.define(version: 20160221190926) do
   add_index "sections", ["student_id"], name: "index_sections_on_student_id"
 
   create_table "students", force: :cascade do |t|
-    t.string   "name"
-    t.string   "last_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "student_name"
+    t.string   "student_number"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

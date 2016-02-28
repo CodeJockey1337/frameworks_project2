@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>First Name:</strong>
-  <%= @student ? @student.name : "NIL STUDENT NAME" %>
+  <strong>Student Name:</strong>
+  <%= @student ? @student.student_name : "NIL STUDENT NAME" %>
 </p>
-
 <p>
-  <strong>Last Name:</strong>
-  <%= @student ? @student.last_name : "NIL STUDENT LAST NAME" %>
+  <strong>Student ID Number:</strong>
+  <%= @student ? @student.student_number : "NIL STUDENT ID NUMBER" %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
