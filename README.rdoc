@@ -1,4 +1,4 @@
-== Frameworks Project 1
+== Frameworks Project 2
 
 * Student: P. Ross Baldwin
 * Class: CS390P - Frameworks
