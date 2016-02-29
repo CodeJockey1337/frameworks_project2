@@ -20,7 +20,7 @@
         <td><%= section.course ? section.course.course_code : "NIL COURSE CODE" %></td>
         <td><%= section ? section.section_number : "NIL SECTION NUMBER" %></td>
         <td><%= section.professor ? (section.professor.name + ' ' + section.professor.last_name) : "NIL PROFESSOR NAME" %></td>
-        <td><%= link_to 'Show', section %></td>
+        <td><%= link_to 'View section info and students list', section %></td>
         <td><%= link_to 'Edit', edit_section_path(section) %></td>
         <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -19,6 +19,14 @@
   <strong>Professor:</strong>
   <%= @section.professor ? @section.professor.name + ' ' + @section.professor.last_name : "NIL STUDENT NAME" %>
 </p>
+<p>
+  <strong>Students in this section:</strong>
+</p>
+<ul>
+  <% @section.students.each do |student| %>
+    <li><%= student.student_name %> </li>
+  <% end %>
+</ul>
 
 
 
