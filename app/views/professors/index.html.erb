@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Professors</h1>
+<h1>Professors at MSUD</h1>
 
 <table>
   <thead>
@@ -16,7 +16,7 @@
       <tr>
         <td><%= professor.name %></td>
         <td><%= professor.last_name %></td>
-        <td><%= link_to 'Show', professor %></td>
+        <td><%= link_to 'View professor details and students list', professor %></td>
         <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
         <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -18,11 +18,13 @@ class StudentsController < ApplicationController
   def new
     @student = Student.new
     @sections = Section.all
+    @professors = Professor.all
   end
 
   # GET /students/1/edit
   def edit
     @sections = Section.all
+    @professors = Professor.all
   end
 
   # POST /students
@@ -73,6 +75,6 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:student_name, :student_number, :section_ids => [])
+      params.require(:student).permit(:student_name, :student_number, :section_ids => [], :professor_ids => [])
     end
 end

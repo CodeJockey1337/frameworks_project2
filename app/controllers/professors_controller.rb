@@ -17,10 +17,12 @@ class ProfessorsController < ApplicationController
   # GET /professors/new
   def new
     @professor = Professor.new
+    @students = Student.all
   end
 
   # GET /professors/1/edit
   def edit
+    @students = Student.all
   end
 
   # POST /professors
@@ -71,6 +73,6 @@ class ProfessorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def professor_params
-      params.require(:professor).permit(:name, :last_name)
+      params.require(:professor).permit(:name, :last_name, :student_ids => [])
     end
 end

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Students</h1>
+<h1>Students Enrolled at MSUD</h1>
 
 <table>
   <thead>
@@ -17,7 +17,7 @@
         <td><%= student.student_name %></td>
         <td><%= student.student_number %></td>
         <td><%= link_to 'View student details', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Edit student details and add class sections', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

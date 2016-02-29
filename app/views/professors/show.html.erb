@@ -8,6 +8,14 @@
   <strong>Last Name:</strong>
   <%= @professor ? @professor.last_name : "NIL PROFESSOR LAST NAME" %>
 </p>
+<p>
+  <strong>Students who have this professor in class:</strong>
+  <ul>
+    <% @professor.students.each do |student| %>
+      <li><%= student.student_name %></li>
+    <% end %>
+  </ul>
+</p>
 
-<%= link_to 'Edit', edit_professor_path(@professor) %> |
+<%= link_to 'Edit', edit_professor_path(@professor) %>
 <%= link_to 'Return to Professors list', professors_path %>

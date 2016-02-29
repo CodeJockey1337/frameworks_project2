@@ -12,7 +12,7 @@
   <strong>Class Sections Enrolled In:</strong>
   <ul>
     <% @student.sections.each do |s| %>
-      <li><%= s.section_number %> <%= s.course.name %></li>
+      <li><%= s.section_number %> <%= s.course.name %> <%= s.professor.last_name %></li>
     <% end %>
   </ul>
 </p>
