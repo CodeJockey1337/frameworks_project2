@@ -8,6 +8,14 @@
   <strong>Student ID Number:</strong>
   <%= @student ? @student.student_number : "NIL STUDENT ID NUMBER" %>
 </p>
+<p>
+  <strong>Class Sections Enrolled In:</strong>
+  <ul>
+    <% @student.sections.each do |s| %>
+      <li><%= s.section_number %></li>
+    <% end %>
+  </ul>
+</p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Return to Students list', students_path %>

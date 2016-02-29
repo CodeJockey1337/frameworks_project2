@@ -12,6 +12,16 @@
   <strong>Course Code:</strong>
   <%= @course.course_code %>
 </p>
+<p>
+  <strong>Sections of this course:</strong>
+</p>
+<ul>
+  <strong>Section # - Class Name - Professor</strong>
+  <% @course.sections.each do |section| %>
+    <li> <%= section.section_number %> <%= section.course.name %> <%= section.professor.last_name %></li>
+  <% end %>
+</ul>
+
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Return to Courses list', courses_path %>

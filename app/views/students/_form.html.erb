@@ -19,6 +19,10 @@
     <%= f.label 'Student ID Number' %><br>
     <%= f.text_field :student_number %>
   </div>
+  <div>
+    <%= f.label :section_id %>
+    <%= f.collection_check_boxes(:section_ids, @sections, :id, :section_number) %>
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>
