@@ -6,6 +6,13 @@ class SectionsController < ApplicationController
   attr_accessor :professor_id 
   attr_accessor :course_id
   
+  rescue_from ActiveRecord::StatementInvalid, with: :error_occured
+  
+  def error_occured(exception)
+    render json: {error: exception.message}.to_json, status: 500
+    return
+  end
+  
   # GET /sections
   # GET /sections.json
   def index

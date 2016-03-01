@@ -20,8 +20,9 @@
     <%= f.text_field :student_number %>
   </div>
   <div>
-    <%= f.label :section_id %>
-    <%= f.collection_check_boxes(:section_ids, @sections, :id, :name) %>
+    <%= f.label 'Class Sections' %>
+    <!--The method call below needs to be sent the "Section.all" object to work correctly -->
+    <%= :section_ids ? f.collection_check_boxes(:section_ids, Section.all, :id, :complete_section_name) : 'No sections' %>
 </div>
   <div class="actions">
     <%= f.submit %>
