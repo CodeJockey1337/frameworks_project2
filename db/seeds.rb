@@ -75,8 +75,8 @@ Professor.create([
         last_name: 'Beaty'
     },
     {
-        name: 'Robert',
-        last_name: 'Baldwin'
+        name: 'Aaron',
+        last_name: 'Gordon'
     },
     {
         name: 'Jerry',
@@ -89,6 +89,14 @@ Professor.create([
     {
         name: 'Ilya',
         last_name: 'Georgiev'
+    },
+    {
+        name: 'Jody',
+        last_name: 'Paul'
+    },
+    {
+        name: 'Judy',
+        last_name: 'Gurka'
     }
     ])
     
@@ -97,11 +105,6 @@ Course.create([
         name: 'Frameworks',
         department_name: 'CS',
         course_code: 'CS390P'
-    },
-    {
-        name: 'Software Engineering 1',
-        department_name: 'CS',
-        course_code: 'CS4250'
     },
     {
         name: 'Computer Science 1',
@@ -124,6 +127,11 @@ Course.create([
         course_code: 'CS3600'
     },
     {
+        name: 'Software Engineering 1',
+        department_name: 'CS',
+        course_code: 'CS4250'
+    },
+    {
         name: 'Software Engineering 2',
         department_name: 'CS',
         course_code: 'CS4260'
@@ -138,4 +146,62 @@ Course.create([
         department_name: 'CS',
         course_code: 'CS3210'
     }
+    ])
+    
+Section.create([
+    {
+        section_number: 1,
+        professor_id: 1,
+        course_id: 1
+    },
+    {
+        section_number: 2,
+        professor_id: 1,
+        course_id: 1
+    },
+    {
+        section_number: 1,
+        professor_id: 2,
+        course_id: 2
+    },
+    {
+        section_number: 1,
+        professor_id: 3,
+        course_id: 3
+    },
+    {
+        section_number: 1,
+        professor_id: 4,
+        course_id: 4
+    },
+    {
+        section_number: 1,
+        professor_id: 5,
+        course_id: 5
+    },
+    {
+        section_number: 2,
+        professor_id: 5,
+        course_id: 5
+    },
+    {
+        section_number: 1,
+        professor_id: 6,
+        course_id: 6
+    },
+    {
+        section_number: 1,
+        professor_id: 7,
+        course_id: 7
+    },
+    {
+        section_number: 1,
+        professor_id: 1,
+        course_id: 8
+    },
+    {
+        section_number: 1,
+        professor_id: 2,
+        course_id: 9
+    },
     ])

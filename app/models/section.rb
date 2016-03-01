@@ -10,10 +10,10 @@ class Section < ActiveRecord::Base
   validates_presence_of :professor, message: ': Must be associated with a valid professor'
   validates_presence_of :course, message: ': Must be associated with a valid course'
   
-  validates_uniqueness_of :section_number, scope: :course
+  validates_uniqueness_of :section_number, scope: :course, message: 'must be unique on a per-course basis'
   
   def complete_section_name
-    course.name + ' ' + section_number.to_s
+    course.name + ' ' + 'section ' + section_number.to_s
   end
 
 end
