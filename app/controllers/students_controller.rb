@@ -3,6 +3,12 @@ class StudentsController < ApplicationController
 
   attr_accessor :name
 
+  #Search Methods
+  def name_search
+    @students = Student.where("student_name like ?", "%#{params[:q]}%")
+    render :index
+  end
+
   # GET /students
   # GET /students.json
   def index

@@ -24,10 +24,17 @@
   </tbody>
 </table>
 
+<p>
+  <%= form_tag(students_name_search_path, method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</p>
+
 <br>
 
 <%= link_to 'New Student', new_student_path %>
-
 
 <p>
     Click here for <%= link_to "Professors", professors_url %> page <br>

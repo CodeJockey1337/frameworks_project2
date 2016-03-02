@@ -26,6 +26,14 @@
   </tbody>
 </table>
 
+<p>
+  <%= form_tag(courses_name_search_path, method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</p>
+
 <br>
 
 <%= link_to 'New Course', new_course_path %>

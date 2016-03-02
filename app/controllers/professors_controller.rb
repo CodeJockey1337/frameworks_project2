@@ -2,6 +2,12 @@ class ProfessorsController < ApplicationController
   before_action :set_professor, only: [:show, :edit, :update, :destroy]
 
   attr_accessor :name
+  
+  #Search methods
+  def name_search
+    @professors = Professor.where("name like ?", "%#{params[:q]}%")
+    render :index
+  end
 
   # GET /professors
   # GET /professors.json

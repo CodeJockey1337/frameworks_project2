@@ -6,9 +6,15 @@ Rails.application.routes.draw do
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
   
+  #SEARCH METHOD ROUTES
+  get '/students/name_search', to: 'students#name_search'
+  get '/professors/name_search', to: 'professors#name_search'
+  get '/courses/name_search', to: 'courses#name_search'
+  get '/sections/section_course_name_search', to: 'sections#section_course_name_search'
+  
+  #Resources routes
   resources :users
   resources :sessions
-
   resources :sections
   resources :courses
   resources :professors
