@@ -9,7 +9,17 @@ class SectionsController < ApplicationController
   #Search methods
   #section search for course name -> references foreign key of course.name
   def section_course_name_search
-    @sections = Section.includes(:courses).where("name like ?", "%#{params[:q]}%")
+    @sections = Section.all
+    match = [];
+    @sections.each do |s|
+    puts s.inspect
+      if s.course.name.include? params[:q]
+        match.push s;
+        
+      end
+    end
+    
+    @sections = match
     render :index
   end
   

@@ -1,5 +1,6 @@
 class Course < ActiveRecord::Base
     has_many :sections
+    #delegate :name, to: :section
     
     #validations - never assume your forms are used!
     validates :name, presence: true, length: { minimum: 2, maximum: 30 }
