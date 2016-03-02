@@ -8,5 +8,5 @@
 
 ===Assignment Two
 * Extend your app with validations, search on each index page, and authentication. 
-* For extra credit, perform the search via Ajax, and/or add some CSS to your app. 
 * Write the same type of paper you did for assignment one.
+* For extra credit, perform the search via Ajax, and/or add some CSS to your app.
