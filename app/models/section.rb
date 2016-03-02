@@ -15,9 +15,4 @@ class Section < ActiveRecord::Base
   def complete_section_name
     course.name + ' ' + 'section ' + section_number.to_s
   end
-  
-  def return_section_name
-    course.name
-  end
-
 end

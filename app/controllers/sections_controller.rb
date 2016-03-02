@@ -12,10 +12,8 @@ class SectionsController < ApplicationController
     @sections = Section.all
     match = [];
     @sections.each do |s|
-    puts s.inspect
-      if s.course.name.include? params[:q]
+      if s.course.name.downcase.include? params[:q]
         match.push s;
-        
       end
     end
     
