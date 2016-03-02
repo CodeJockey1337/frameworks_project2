@@ -45,3 +45,8 @@ group :development do
   gem 'spring'
 end
 
+# Encryption gem for use in password hashing
+gem "bcrypt-ruby", :require => "bcrypt"
+
+# Strong params
+#gem 'strong_parameters'
